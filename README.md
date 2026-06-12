@@ -1,60 +1,68 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4B0082,100:8A2BE2&height=160&section=header&text=training-grounds&fontSize=38&fontColor=ffffff&fontAlignY=42&desc=My%20Coding%20Timeline%20%26%20Daily%20Practice&descAlignY=62&descSize=16" />
+  <kbd><b><h1>CODE TRAINING GROUNDS</h1></b></kbd>
+  <br>
+  <sub><b>Daily Practice, Academic Assignments & Coding Timeline</b></sub>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Author-LouasDev-8A2BE2?style=flat-square&logo=github&logoColor=white" />
   <img src="https://img.shields.io/badge/Repository-Central%20Hub-4B0082?style=flat-square" />
-  <img src="https://img.shields.io/badge/Status-Constantly%20Updated-239120?style=flat-square" />
+  <img src="https://img.shields.io/badge/Status-Active-239120?style=flat-square" />
 </p>
 
 ---
 
-## 📌 Sobre o Repositório
+## Core Concept
 
-Este é o meu **hub central de estudos e linha do tempo de evolução de código**. Aqui eu centralizo toda a minha prática diária de programação que não se encaixa em um grande projeto final estruturado. 
+Este repositório centraliza toda a minha **prática diária de programação e evolução lógica**. Ele funciona como um diário de bordo técnico e linha do tempo de aprendizado, consolidando atividades que não demandam um repositório isolado de grande porte.
 
-Seja uma lista de exercícios passada na faculdade, um desafio de lógica em plataformas externas, pequenos testes de conceitos ou scripts rápidos, tudo o que serve de fundação para o meu aprendizado vive aqui, organizado por ecossistema.
+O objetivo principal é documentar a consistência dos meus estudos, o domínio de sintaxe em diferentes ecossistemas e a evolução da minha maturidade de código ao longo do tempo.
 
-### 🧠 O que você vai encontrar aqui?
-* **Listas Acadêmicas:** Exercícios, desafios e trabalhos práticos propostos por professores.
-* **Desafios de Plataformas:** Resoluções de problemas de lógica (Beecrowd, LeetCode, HackerRank, etc.).
-* **Laboratório & Testes:** Pequenas POCs (*Proof of Concept*), testes de sintaxe, algoritmos e estruturas de dados.
+### O que compõe este Hub?
+* **Demandas Acadêmicas:** Resoluções de listas de exercícios, algoritmos de suporte e projetos de disciplinas universitárias.
+* **Desafios Autônomos:** Soluções focadas em lógica de programação estruturada e competitiva (plataformas externas).
+* **Laboratório Técnico:** Pequenas provas de conceito (POCs), testes de bibliotecas e fixação de sintaxe.
 
 ---
 
-## 🛠️ Tecnologias & Ferramentas Presentes
+## Tech Stack
 
 <p align="left">
-  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#">
-  <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" alt="C">
-  <img src="https://img.shields.io/badge/SQL-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" alt="SQL">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=cs,dotnet,c,mysql,html" alt="My Skills" />
+  </a>
 </p>
 
 ---
 
-## 🗺️ Índice de Navegação
+## Navegação
 
-| Tecnologia | Atividades Acadêmicas | Desafios & Prática Livre | Última Atualização |
-| :--- | :---: | :---: | :---: |
-| 🚀 [C#](./csharp/README.md) | Listas e Trabalhos | Plataformas e Desafios | `Em progresso` |
-| 🛡️ [C](./c/README.md) | Algoritmos e Estruturas | Exercícios de Lógica | `Em progresso` |
-| 🗄️ [SQL](./sql/README.md) | Modelagem e Queries | Desafios de Banco de Dados | `Em progresso` |
+| Tecnologia | Contexto Acadêmico | Prática Independente | Status |
+| :--- | :--- | :--- | :--- |
+| **[.NET / C#](./csharp/README.md)** | Exercícios de Curso / POO | Desafios de Lógica & Algoritmos | `Em Progresso` |
+| **[C](./c/README.md)** | Estruturas de Dados / Algoritmos | Resoluções de Desafios Estritamente Lógicos | `Em Progresso` |
+| **[SQL](./sql/README.md)** | Modelagem e Banco de Dados | Queries Práticas & Desafios de Manipulação | `Em Progresso` |
+| **[HTML](./html/README.md)** | Estruturas Web / Web Semântica | Práticas de Marcação e Interfaces | `Em Progresso` |
+
+> *Nota: Os links e o status de conclusão dos módulos são atualizados manualmente conforme novos blocos de código são consolidados.*
 
 ---
 
-## 📂 Organização das Pastas
+## Estrutura de Diretórios
 
-Para manter a linha do tempo legível, cada ecossistema segue o mesmo padrão de organização interna:
+A arquitetura de pastas foi projetada para isolar contextos teóricos/universitários de estudos autodidatas:
 
 ```text
 training-grounds/
 ├── csharp/
-│   ├── academic/      ← Disciplinas, listas de professores e atividades de curso
-│   └── practice/      ← Desafios de código autônomos e estudo livre
+│   ├── academic/      ← Trabalhos acadêmicos e ementas de disciplinas
+│   └── practice/      ← Desafios autônomos e estudo focado em plataformas
 ├── c/
 │   ├── academic/
 │   └── practice/
-└── sql/
+├── sql/
+│   ├── academic/
+│   └── practice/
+└── html/
     ├── academic/
     └── practice/
