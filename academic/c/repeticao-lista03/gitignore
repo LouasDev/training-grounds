@@ -1,0 +1,8 @@
+# CLion / CMake
+cmake-build-*/
+.idea/
+
+# Compilados
+*.o
+*.out
+*.exe
