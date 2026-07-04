@@ -1,0 +1,13 @@
+# Build (CMake/CLion)
+cmake-build-debug/
+cmake-build-release/
+CMakeFiles/
+CMakeCache.txt
+
+# Binários compilados
+*.o
+*.out
+*.exe
+
+# Arquivos de IDE
+.idea/
