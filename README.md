@@ -22,10 +22,7 @@ Este repositório centraliza minha evolução lógica e prática diária. Funcio
 
 ### 💻 Stack de Estudos
 
-* **.NET / C#** [Acadêmico](./academic/csharp/) | [Prática](./practice/csharp/)
 * **C (Algoritmos)** [Acadêmico](./academic/c/) | [Prática](./practice/c/)
-* **SQL (Bancos)** [Acadêmico](./academic/sql/) | [Prática](./practice/sql/)
-* **HTML/Web** [Acadêmico](./academic/html/) | [Prática](./practice/html/)
 
 ---
 
@@ -37,11 +34,6 @@ A organização segue a separação por finalidade e ecossistema:
 training-grounds/
 ├── academic/           # Trabalhos e listas do IFNMG
 │   ├── c/
-│   ├── csharp/
-│   ├── sql/
-│   └── html/
 └── practice/           # Desafios autônomos e lógica
     ├── c/
-    ├── csharp/
-    ├── sql/
-    └── html/
+
