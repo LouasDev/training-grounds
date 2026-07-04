@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — Portal do Caos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">🗳️</span>
+      Portal do <span class="logo-highlight">Caos</span>
+    </a>
+    <nav>
+      <a href="index.html" class="active">Login</a>
+      <a href="cadastro.html">Cadastro</a>
+    </nav>
+  </header>
+
+  <main class="auth-layout">
+    <div class="auth-visual">
+      <h2>A Disputa Mais<br>Sem Noção do País</h2>
+      <p>Nunca antes na história desse país um login foi tão estético.</p>
+      <div class="candidate-row">
+        <div class="candidate-thumb">
+          <img src="img/lula.jpg" alt="Lula" onerror="this.style.display='none';this.nextElementSibling.textContent='🧔'">
+          <span>Lula</span>
+        </div>
+        <div class="candidate-thumb">
+          <img src="img/bolsonaro.jpg" alt="Bolsonaro" onerror="this.style.display='none';this.nextElementSibling.textContent='🤷'">
+          <span>Bolsonaro</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-form-side">
+      <div class="auth-form-card">
+        <h1>Entrar</h1>
+        <p class="subtitle">Acesse o sistema mais zoeira da história</p>
+
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="••••••••" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary" onclick="entrar()">
+            Entrar 🚀
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a>
+        </div>
+
+        <p class="auth-meme">"Prometo que seus dados estão mais seguros que o Pix do governo."</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function entrar() {
+      const email = document.getElementById('email').value.trim();
+      const senha = document.getElementById('senha').value.trim();
+
+      if (!email || !senha) {
+        alert('Preencha todos os campos, meu filho!');
+        return;
+      }
+      if (!email.includes('@')) {
+        alert('E-mail inválido! Cadê o @?');
+        return;
+      }
+      if (senha.length < 3) {
+        alert('Senha muito curta! Até a do cofre é maior.');
+        return;
+      }
+
+      localStorage.setItem('email', email);
+      window.location.href = 'home.html';
+    }
+  </script>
+</body>
+</html>

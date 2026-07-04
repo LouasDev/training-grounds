@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil — Portal do Caos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="home.html" class="logo">
+      <span class="logo-icon">🗳️</span>
+      Portal do <span class="logo-highlight">Caos</span>
+    </a>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="perfil.html" class="active">Perfil</a>
+      <a href="index.html" class="btn-nav">Sair</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+
+    <div class="profile-card">
+      <div class="profile-cover"></div>
+      <div class="profile-avatar-wrapper">
+        <img class="profile-avatar" id="profileAvatar" src="img/avatar.png" alt="Avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23ede9fe%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2265%22 text-anchor=%22middle%22 font-size=%2250%22>🧔</text></svg>'">
+      </div>
+      <div class="profile-body">
+        <h2 id="perfilNome">Zé da Silva</h2>
+        <p class="profile-email" id="perfilEmail">ze@caos.com</p>
+
+        <div class="profile-info-grid">
+          <div class="profile-info-item">
+            <span class="label">Curso</span>
+            <span class="value" id="perfilCurso">Ciência da Computação</span>
+          </div>
+          <div class="profile-info-item">
+            <span class="label">Período</span>
+            <span class="value" id="perfilPeriodo">7º Semestre</span>
+          </div>
+          <div class="profile-info-item">
+            <span class="label">Candidato</span>
+            <span class="value" id="perfilCandidato">
+              <span class="badge badge-purple">Nenhum</span>
+            </span>
+          </div>
+          <div class="profile-info-item">
+            <span class="label">Status</span>
+            <span class="value">🇧🇷 De saco cheio</span>
+          </div>
+        </div>
+
+        <p class="profile-desc" id="perfilDesc">
+          Aluno que so quer passar na materia. Nao tem lado politico, so quer ver o caos acontecer.
+          Entrou no sistema so pela zoeira e descobriu que e melhor que estudar.
+        </p>
+
+        <div class="profile-actions">
+          <button class="btn btn-primary btn-sm" onclick="editarPerfil()">✏️ Editar Perfil</button>
+          <a href="index.html" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza? Vai perder o melhor sistema da historia!')">🚪 Sair</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="vs-section" style="max-width:600px;margin:0 auto 24px;">
+      <h3>🎭 Escolha seu candidato</h3>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+        <button class="btn-lula" onclick="escolherCandidato('lula')">🧔 Lula</button>
+        <button class="btn-bolsonaro" onclick="escolherCandidato('bolsonaro')">🤷 Bolsonaro</button>
+        <button class="btn btn-ghost btn-sm" onclick="escolherCandidato('neutro')">😐 Neutro</button>
+      </div>
+    </div>
+
+    <div style="max-width:600px;margin:0 auto;">
+      <h3 class="section-title">🎤 Frases do Perfil</h3>
+      <div class="quotes-grid" style="grid-template-columns:1fr;">
+        <div class="quote-card lula-quote">
+          <p class="quote-label">🧔 Lula</p>
+          <p class="quote-text">Nunca antes na historia desse pais um perfil foi tao editado.</p>
+        </div>
+        <div class="quote-card bolsonaro-quote">
+          <p class="quote-label">🤷 Bolsonaro</p>
+          <p class="quote-text">Olha o perfil aqui ó. Ta mais completo que o da minha esposa.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    Portal do Caos 2026 · Projeto Academico · Desenvolvimento Web II
+  </footer>
+
+  <script>
+    var dados = {
+      nome: localStorage.getItem('nome') || 'Zé da Silva',
+      email: localStorage.getItem('email') || 'ze@caos.com',
+      curso: 'Ciência da Computação',
+      periodo: '7º Semestre',
+      candidato: localStorage.getItem('candidato') || 'neutro'
+    };
+
+    var candidatos = {
+      lula: { label: 'Lula', badge: 'badge-lula', img: 'img/lula.jpg' },
+      bolsonaro: { label: 'Bolsonaro', badge: 'badge-bolsonaro', img: 'img/bolsonaro.jpg' },
+      neutro: { label: 'Nenhum', badge: 'badge-purple', img: '' }
+    };
+
+    function atualizarPerfil() {
+      document.getElementById('perfilNome').textContent = dados.nome;
+      document.getElementById('perfilEmail').textContent = dados.email;
+      document.getElementById('perfilCurso').textContent = dados.curso;
+      document.getElementById('perfilPeriodo').textContent = dados.periodo;
+
+      var cand = candidatos[dados.candidato] || candidatos.neutro;
+      document.getElementById('perfilCandidato').innerHTML =
+        '<span class="badge ' + cand.badge + '">' + cand.label + '</span>';
+    }
+
+    function escolherCandidato(cand) {
+      dados.candidato = cand;
+      localStorage.setItem('candidato', cand);
+      atualizarPerfil();
+    }
+
+    function editarPerfil() {
+      var nome = prompt('Qual seu nome?', dados.nome);
+      if (nome && nome.trim()) {
+        dados.nome = nome.trim();
+        localStorage.setItem('nome', dados.nome);
+      }
+      var email = prompt('Qual seu e-mail?', dados.email);
+      if (email && email.trim()) {
+        dados.email = email.trim();
+        localStorage.setItem('email', dados.email);
+      }
+      atualizarPerfil();
+    }
+
+    atualizarPerfil();
+  </script>
+</body>
+</html>
