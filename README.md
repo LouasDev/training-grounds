@@ -15,7 +15,6 @@ Este repositório centraliza minha evolução lógica e prática diária. Funcio
 
 * **Academic:** Resoluções de listas e projetos universitários.
 * **Practice:** Desafios de lógica e fixação de sintaxe.
-* **Lab:** Provas de conceito (POCs) e testes rápidos.
 
 ---
 
